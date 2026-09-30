@@ -1,0 +1,18 @@
+name: Bug report
+description: Report a reproducible problem in PR Spark
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: Remove private issue content before posting.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior

@@ -24,7 +24,7 @@ node bin/pr-spark.js --title "Fix empty search results" --number 42
 For a richer brief, point it at an exported issue body:
 
 ```bash
-npx pr-spark \
+node bin/pr-spark.js \
   --title "Add keyboard navigation to the command palette" \
   --body issue.md \
   --number 128
@@ -53,7 +53,17 @@ node bin/pr-spark.js --title "Improve the empty state"
 
 ## Contributing
 
-Issues and pull requests are welcome. Keep changes focused, add a test where behavior changes, and avoid committing credentials or private issue content.
+PR Spark is intentionally small and friendly to first-time contributors. Start with the [contribution guide](CONTRIBUTING.md), browse issues labelled [`good first issue`](../../issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22), and keep changes focused.
+
+Please add a test when behavior changes, avoid committing credentials or private issue content, and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Roadmap
+
+- [ ] `--format json` for tool integrations
+- [ ] Read an issue body from standard input
+- [ ] Add output sections only when they are useful for the issue type
+
+See [first-contribution ideas](docs/FIRST_CONTRIBUTION.md) for scoped starter tasks.
 
 ## License
 
