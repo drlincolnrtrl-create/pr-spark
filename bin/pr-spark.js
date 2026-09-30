@@ -10,7 +10,7 @@ const valueAfter = (flag) => {
 };
 
 if (args.includes("--help") || args.includes("-h")) {
-  console.log("PR Spark ⚡\n\nUsage:\n  pr-spark --title \"Fix empty search results\" [--body issue.md] [--number 42]");
+  console.log(`PR Spark ⚡\n\nUsage:\n  pr-spark --title "Fix empty search results" [--body issue.md] [--number 42]\n\nOptions:\n  --title   Issue title (required)\n  --body    Path to a text or Markdown issue body\n  --number  Issue number for the PR template\n  --help    Show this message`);
   process.exit(0);
 }
 
