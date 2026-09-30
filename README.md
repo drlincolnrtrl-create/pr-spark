@@ -16,7 +16,9 @@ Open-source contributions stall when an issue feels too big or ambiguous. PR Spa
 ## Try it
 
 ```bash
-npx pr-spark --title "Fix empty search results" --number 42
+git clone https://github.com/drlincolnrtrl-create/pr-spark.git
+cd pr-spark
+node bin/pr-spark.js --title "Fix empty search results" --number 42
 ```
 
 For a richer brief, point it at an exported issue body:
