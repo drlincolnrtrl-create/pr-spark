@@ -1,0 +1,17 @@
+{
+  "name": "pr-spark",
+  "version": "0.1.0",
+  "description": "Turn any issue into a review-ready open-source contribution.",
+  "type": "module",
+  "bin": {
+    "pr-spark": "./bin/pr-spark.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["open-source", "github", "pull-request", "contributor", "cli"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
