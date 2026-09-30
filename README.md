@@ -2,6 +2,10 @@
 
 > **Turn any issue into a review-ready open-source contribution.**
 
+[![Tests](https://github.com/drlincolnrtrl-create/pr-spark/actions/workflows/test.yml/badge.svg)](https://github.com/drlincolnrtrl-create/pr-spark/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Good first issues](https://img.shields.io/github/issues/drlincolnrtrl-create/pr-spark/good%20first%20issue)](https://github.com/drlincolnrtrl-create/pr-spark/labels/good%20first%20issue)
+
 PR Spark is a tiny, dependency-free CLI for developers who want to move from “I found an issue” to “I know exactly what to ship.” Give it an issue title and description; it creates a focused contribution brief, a test checklist, and a clean pull-request draft.
 
 ## Why PR Spark?
