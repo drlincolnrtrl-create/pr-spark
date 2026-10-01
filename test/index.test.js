@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { createContributionBrief } from "../src/index.js";
+import { createContributionBrief, createContributionData } from "../src/index.js";
 
 test("creates a focused brief and links the issue number", () => {
   const brief = createContributionBrief({
@@ -16,4 +16,17 @@ test("creates a focused brief and links the issue number", () => {
 
 test("requires a title", () => {
   assert.throws(() => createContributionBrief({ title: "" }), /title is required/);
+});
+
+test("creates structured data for automations", () => {
+  const data = createContributionData({
+    title: "Document local setup",
+    body: "New contributors need a local setup guide.",
+    number: 8,
+  });
+
+  assert.equal(data.kind, "Documentation");
+  assert.equal(data.issueNumber, 8);
+  assert.match(data.problem, /New contributors need a local setup guide/);
+  assert.equal(data.smallestUsefulChange.length, 4);
 });

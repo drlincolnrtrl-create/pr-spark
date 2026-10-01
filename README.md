@@ -34,6 +34,17 @@ node bin/pr-spark.js \
   --number 128
 ```
 
+### JSON for tools and automations
+
+Use structured output when you want to pass the brief into another script, workflow, or agent:
+
+```bash
+node bin/pr-spark.js \
+  --title "Add keyboard navigation to the command palette" \
+  --number 128 \
+  --format json
+```
+
 ## Example output
 
 ```text
@@ -63,7 +74,6 @@ Please add a test when behavior changes, avoid committing credentials or private
 
 ## Roadmap
 
-- [ ] `--format json` for tool integrations
 - [ ] Read an issue body from standard input
 - [ ] Add output sections only when they are useful for the issue type
 

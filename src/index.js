@@ -13,10 +13,36 @@ function firstUsefulSentence(body) {
   return sentence || "The issue description needs a concise reproduction or expected-behavior note.";
 }
 
-export function createContributionBrief({ title, body = "", number } = {}) {
+export function createContributionData({ title, body = "", number } = {}) {
   if (!compact(title || "")) throw new Error("An issue title is required.");
+
   const kind = classifyIssue(title, body);
+  const cleanTitle = compact(title);
   const problem = firstUsefulSentence(body);
+
+  return {
+    title: cleanTitle,
+    issueNumber: number ? Number(number) : null,
+    kind,
+    problem,
+    smallestUsefulChange: [
+      "Reproduce or demonstrate the current behavior.",
+      "Change only the component, function, or documentation section that owns it.",
+      "Add or update one focused test that would fail before the change.",
+      "Keep unrelated formatting and refactors out of the PR.",
+    ],
+    proofItWorks: [
+      "Existing test suite passes",
+      "New or updated focused test passes",
+      "Happy path verified manually",
+      "One edge case checked",
+    ],
+  };
+}
+
+export function createContributionBrief({ title, body = "", number } = {}) {
+  const data = createContributionData({ title, body, number });
+  const { kind, problem } = data;
   const closes = number ? `\nCloses #${number}` : "";
 
   return `# PR Spark ⚡ Contribution Brief
